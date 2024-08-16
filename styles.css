@@ -1,0 +1,89 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+@font-face {
+  font-family: 'brownistregular';
+  src: url('fonts/brownist-webfont.woff2') format('woff2'),
+       url('fonts/brownist-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.container {
+  display: flex;
+  background-color: black;
+}
+
+.img_container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100vh;
+  width: 33vw;
+}
+
+.logo_container {
+  position: absolute;
+  display: flex;
+  background-color: rgb(0,0,0, 0.5);
+  height: 25%;
+  width: 100%;
+}
+
+.logo{
+  flex: 1;
+}
+
+.logo_text {
+  flex: 3;
+  color: rgb(175, 255, 255);
+  font-family: 'brownistregular';
+  text-align: center;
+  font-size: calc(3.5vw + 3.5vh);
+  margin-top: 30px;
+}
+
+.puppy {
+  width: 100%;
+  height: 100%;
+}
+
+.img_text,
+.img_link {
+  color: white;
+}
+
+.img_text {
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  margin-top: -30px;
+}
