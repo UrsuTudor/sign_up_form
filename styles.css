@@ -35,11 +35,12 @@ p, h1, h2, h3, h4, h5, h6 {
 
 body {
   font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: #E4E6EB;
 }
 
 .container {
   display: flex;
-  background-color: black;
+  background-color: #18191A
 }
 
 .img_container {
@@ -64,7 +65,7 @@ body {
 
 .logo_text {
   flex: 3;
-  color: rgb(175, 255, 255);
+  color: rgb(200, 255, 255);
   font-family: 'brownistregular';
   text-align: center;
   font-size: calc(3.5vw + 3.5vh);
@@ -86,4 +87,101 @@ body {
   width: 100%;
   text-align: center;
   margin-top: -30px;
+}
+
+.form_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 67vw;
+}
+
+.info_text_container {
+  font-size: clamp(1rem, 0.75rem + 1.5vw, 2rem);
+  max-inline-size: 66ch;
+  font-weight: bold;
+  flex: 1;
+}
+
+.italic {
+  font-style: italic;
+}
+
+label {
+  display: block;
+}
+
+#sign_up_data {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex: 1;
+
+  width: 100%;
+  background-color:#e4e6eb;
+  color: #3a3b3c;
+  box-shadow: 10px 5px 5px rgb(248, 142, 22);
+}
+
+.form_column_1 {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.form_column_2 {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-left: -25vw
+}
+
+.form_column_1,
+.form_title {
+  margin-left: 2vw;
+}
+
+.form_column_1,
+.form_column_2{
+  margin-top: -2vw
+}
+
+input {
+  width: 15vw;
+  border: 1px solid #72737581;
+  border-radius: 5px;
+}
+
+.form_title {
+  width: 100%;
+}
+
+.action_container {
+  flex: 1;
+  width: 100%;
+}
+
+#password:invalid,
+#password_confirm:invalid {
+  outline: none;
+  border: 1px solid red;
+  border-radius: 5px;
+}
+
+#password:invalid + span{
+  position: absolute;
+  margin-top: 3vh;
+  margin-left: -15vw;
+}
+
+#password:invalid + span::before{
+  color: red;
+  content: "*Passwords do not match (would be checked with JS)";
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid rgb(0, 110, 255);
+  border-radius: 5px;
 }

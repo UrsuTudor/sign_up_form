@@ -22,6 +22,71 @@
         rel="noopener noreferrer">Unsplash</a>
       </span>
     </div>
+
+    <div class="form_container">
+      <div class="info_text_container">
+        This is not a real online service, but you know you need something like this to ensure that your lovely 
+        little puppy lives a healthy and happy life.
+        <p>Sign up <span class="italic">now</span> to get started.</p>
+        <p>We <span class="italic">know</span> what's best for your fluffy friend!</p>
+      </div>
+
+      <form id="sign_up_data" action="example.com/path" method="post">
+        <h1 class="form_title">Let's do this!</h1>
+
+        <div class="form_column_1">
+          <p>
+            <label for="first_name">
+              <span>FIRST NAME</span>
+            </label>
+            <input type="text" id="first_name" name="username" required>
+          </p>
+          
+          <p>
+            <label for="email">
+              <span>EMAIL</span>
+            </label>
+            <input type="mail" id="email" name="mail" required>
+          </p>
+
+          <p>
+            <label for="password">
+              <span>PASSWORD</span>
+            </label>
+            <input type="password" id="password" name="password" required>
+            <span></span>
+          </p>
+        </div>
+
+        <div class="form_column_2">
+          <p>
+            <label for="last_name">
+              <span>LAST NAME</span>
+            </label>
+            <input type="text" id="last_name" name="username" required>
+          </p>
+
+          <p>
+            <label for="tel">
+              <span>PHONE NUMBER</span>
+            </label>
+            <input type="tel" id="tel" name="phone">
+          </p>
+
+          <p>
+            <label for="password_confirm">
+              <span>CONFIRM PASSWORD</span>
+            </label>
+            <input type="password" id="password_confirm" name="password" required>
+          </p>
+        </div>
+      </form>
+
+      <div class="action_container">
+        <button id="submit_btn" type="submit" form="sign_up_data">Sign up! </button>
+        <span>Already have an account?<a id="login_link" href="login.example">Log in</a></span>
+      </div>
+    </div>
   </div>
 </body>
 </html>
