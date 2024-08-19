@@ -40,7 +40,7 @@ body {
 
 .container {
   display: flex;
-  background-color: #18191A
+  background-color: #18191a
 }
 
 .img_container {
@@ -92,16 +92,26 @@ body {
 .form_container {
   display: flex;
   flex-direction: column;
-  align-items: center;
 
   width: 67vw;
 }
 
 .info_text_container {
-  font-size: clamp(1rem, 0.75rem + 1.5vw, 2rem);
+  flex: 1;
+  margin-left: 2vw;
+  height: 33.3vh;
+
+  font-size: clamp(1rem, 0.75rem + 1.5vw, 1.5rem);
   max-inline-size: 66ch;
   font-weight: bold;
-  flex: 1;
+}
+
+.info_text_container:first-child {
+  margin-top: 10vh;
+}
+
+.info_text_container p + p + p{
+  margin-top: 4vh;
 }
 
 .italic {
@@ -116,12 +126,12 @@ label {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  flex: 1;
-
+  height: 33.3vh;
   width: 100%;
-  background-color:#e4e6eb;
+
+  background-color: #e4e6eb;
   color: #3a3b3c;
-  box-shadow: 10px 5px 5px rgb(248, 142, 22);
+  box-shadow: 0px 5px 5px rgb(248, 142, 22);
 }
 
 .form_column_1 {
@@ -138,12 +148,14 @@ label {
 }
 
 .form_column_1,
-.form_title {
+.form_title,
+#submit_btn,
+.action_container span {
   margin-left: 2vw;
 }
 
 .form_column_1,
-.form_column_2{
+.form_column_2{  
   margin-top: -2vw
 }
 
@@ -154,11 +166,6 @@ input {
 }
 
 .form_title {
-  width: 100%;
-}
-
-.action_container {
-  flex: 1;
   width: 100%;
 }
 
@@ -184,4 +191,43 @@ input:focus {
   outline: none;
   border: 1px solid rgb(0, 110, 255);
   border-radius: 5px;
+}
+
+.action_container {
+  display: flex;
+  flex-direction: column;
+
+  height: 33.4vh;
+  width: 100%;
+  gap: 2vh;
+}
+
+#submit_btn{
+  margin-top: 4vh;
+  width: 10vw;
+  height: 5vh;
+  border-radius: 10px;
+
+  background-color: rgba(248, 142, 22);
+  border: 1px solid rgba(248, 142, 22);
+  box-shadow: 4px 3px 5px rgba(248, 143, 22, 0.685);
+
+  color: #e4e6eb;
+  font-weight: bold;
+  font-size: clamp(1rem, 0.75rem + 1.5vw, 1.5rem);
+}
+
+#submit_btn:hover{
+  background-color: rgba(248, 143, 22, 0.767);
+  border: 1px solid rgba(248, 143, 22, 0.767);
+  box-shadow: 4px 3px 5px rgba(248, 143, 22, 0.514);
+}
+
+#submit_btn:active {
+  transform: scale(0.97);
+}
+
+.login_link {
+  text-decoration: none;
+  color: rgba(248, 142, 22)
 }
